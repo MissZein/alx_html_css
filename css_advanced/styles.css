@@ -120,3 +120,50 @@ nav a {
   color: #B0B0B0;
   line-height: 1.4;
 }
+
+.quote-section {
+  background-color: #c271ff;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+}
+
+.quote-container {
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.quote-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.quote-text {
+  flex: 1;
+}
+
+.testimonial {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.quote-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.quote-title {
+  font-style: italic;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+

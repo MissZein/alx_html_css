@@ -391,3 +391,44 @@ nav a {
   font-size: 16px;
   line-height: 1.6;
 }
+
+.site-footer {
+  background-color: #001f3f; /* Navy blue */
+  color: #ffffff;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+}
+
+.footer-socials i {
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-socials i:hover {
+  color: #00bfff; /* Light blue on hover */
+}
+
+.footer-copy {
+  font-size: 14px;
+}
+

@@ -1,1 +1,2 @@
 # alx_html_css
+This project covers both the basic and advanced HTML and CSS concepts I have learnt in the ALX program. It makes use of flexboxes and sections to divide the different parts of the webpage. 

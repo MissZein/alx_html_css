@@ -1,0 +1,122 @@
+/* Header Background */
+header.navbar {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('./images/Object.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px 60px;
+  font-family: 'Helvetica Neue', sans-serif;
+  position: relative;
+}
+
+/* Nav Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  margin-bottom: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Hero Text */
+.hero-content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.values {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.register-btn {
+  background-color: #C271FF;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* Pros Section */
+.pros {
+  margin-top: 80px;
+}
+
+.pros p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.highlight {
+  color: #C271FF;
+  font-weight: bold;
+}
+
+.avatars {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.person {
+  text-align: center;
+  max-width: 150px;
+}
+
+.person img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.person h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.person p {
+  font-size: 14px;
+  color: #B0B0B0;
+  line-height: 1.4;
+}

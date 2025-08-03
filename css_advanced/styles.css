@@ -272,3 +272,70 @@ nav a {
   opacity: 0.6;
 }
 
+.membership-section {
+  background-color: #071629;
+  padding: 60px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.membership-title {
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+.membership-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #C271FF;
+  margin: 10px auto 0;
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.membership-card {
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.membership-icon {
+  width: 50px;
+  margin-bottom: 15px;
+  filter: brightness(0) saturate(100%) invert(36%) sepia(58%) saturate(1339%) hue-rotate(240deg) brightness(98%) contrast(96%);
+}
+
+.benefit-title {
+  font-size: 1.2rem;
+  color: #C271FF;
+  margin-bottom: 10px;
+}
+
+.benefit-desc {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.register-btn {
+  background-color: #C271FF;
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #a555d9;
+}
+

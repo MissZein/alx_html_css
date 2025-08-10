@@ -1,0 +1,170 @@
+/* Load Source Sans Pro from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+/* Load Spin Cycle OT from local files */
+@font-face {
+    font-family: 'Spin Cycle OT';
+    src: url('spincycle_ot.otf') format('opentype'),
+         url('spincycle_3d_ot.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+.logo-text {
+    font-family: 'Spin Cycle OT', sans-serif;
+}
+/* Header */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo img {
+    height: 40px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:active {
+    color: #FF6565;
+}
+
+/* Title (if Spin Cycle OT is used for headings) */
+.title {
+    font-family: 'Spin Cycle OT', sans-serif;
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('/headphones/images/headphones_hero_1.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,50,0.9));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero-content h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.hero-paragraph {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px; /* keeps lines from being too wide */
+}
+
+
+.cta-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff4e4e;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px; /* Rounded corners */
+    margin-top: 15px;   /* Smaller gap above */
+    margin-bottom: 30px; /* Larger gap below */
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover,
+.cta-btn:active {
+    opacity: 0.9;
+}
+
+
+.hero-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav a {
+        margin: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.2rem;
+    }
+    .hero-content p {
+        font-size: 0.8rem;
+    }
+}

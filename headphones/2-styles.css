@@ -248,3 +248,135 @@ nav a:active {
   font-size: 0.95em;
   color: black;
 }
+
+.our-results {
+  background: url('/headphones/images/headphones_hero_2.jpg') center/contain no-repeat;
+  color: white;
+  text-align: center;
+  padding: 300px 20px;
+  position: relative;
+  background-size: cover;
+}
+
+.our-results .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 60px 20px;
+}
+
+.our-results h2 {
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+
+.our-results p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  .our-results {
+    padding: 80px 15px;
+  }
+  .our-results h2 {
+    font-size: 1.8em;
+  }
+  .our-results p {
+    font-size: 1.1em;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .our-results {
+    padding: 60px 10px;
+  }
+  .our-results .overlay {
+    padding: 40px 15px;
+  }
+  .our-results h2 {
+    font-size: 1.5em;
+  }
+  .our-results p {
+    font-size: 1em;
+  }
+}
+/* Results stats container - horizontal flex */
+.results-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+/* Each pentagon item container */
+.pentagon-item {
+  text-align: center;
+  max-width: 120px;
+  color: white;
+}
+
+.pentagon {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  background: #ff4e4e;
+  clip-path: polygon(
+    50% 0%,      /* top point */
+    90% 35%,     /* top-right */
+    75% 90%,     /* bottom-right */
+    25% 90%,     /* bottom-left */
+    10% 35%      /* top-left */
+  );
+  display: flex;
+  flex-direction: column;   /* stack text vertically */
+  justify-content: center;  /* vertical center */
+  align-items: center;      /* horizontal center */
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0 auto 15px auto;
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* some vertical breathing room */
+}
+
+.pentagon .percent {
+  font-size: 2.5rem;   /* bigger font for +2% */
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.pentagon .desc {
+  font-size: 0.6rem;   /* smaller font for description */
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+/* Adjust text below the pentagon if any */
+.pentagon-item p {
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+  margin-top: 10px;  /* separate from pentagon */
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .results-stats {
+    gap: 20px;
+  }
+  .pentagon {
+    width: 80px;
+    height: 70px;
+    font-size: 1.2rem;
+  }
+  .pentagon-item {
+    max-width: 90px;
+  }
+  .pentagon-item p {
+    font-size: 0.9rem;
+  }
+}

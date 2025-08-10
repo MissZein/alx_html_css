@@ -1,4 +1,4 @@
-Headphones Landing Page
+Headphones Landing Page,
 A responsive, modern landing page built with HTML, CSS, and JavaScript.
 Designed to showcase product features, services, and company results, with a sleek hero section, interactive hamburger menu for mobile, and clean contact and footer sections.
 

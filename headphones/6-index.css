@@ -1,0 +1,573 @@
+/* Load Source Sans Pro from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+/* Load Spin Cycle OT from local files */
+@font-face {
+    font-family: 'Spin Cycle OT';
+    src: url('spincycle_ot.otf') format('opentype'),
+         url('spincycle_3d_ot.otf') format('opentype');
+         
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Holberton School Icon Font */
+@font-face {
+  font-family: 'holberton_school-icon';
+  src: url('fonts/holberton_school-icon.eot');
+  src: url('fonts/holberton_school-icon.eot?#iefix') format('embedded-opentype'),
+       url('fonts/holberton_school-icon.woff') format('woff'),
+       url('fonts/holberton_school-icon.ttf') format('truetype'),
+       url('fonts/holberton_school-icon.svg#holberton_school-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* Generic icon styles */
+[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+  font-family: 'holberton_school-icon' !important;
+  speak-as: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 50px;
+  color: #FF6565;
+}
+
+/* Icon codes */
+.holberton_school-icon-ic_music:before { content: "\e90d"; }
+.holberton_school-icon-ic_video:before { content: "\e910"; }
+.holberton_school-icon-ic_sound:before { content: "\e90e"; }
+.holberton_school-icon-ic_hearing:before { content: "\e909"; }
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+.logo-text {
+    font-family: 'Spin Cycle OT', sans-serif;
+}
+/* Header */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo img {
+    height: 40px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:active {
+    color: #FF6565;
+}
+
+/* Title (if Spin Cycle OT is used for headings) */
+.title {
+    font-family: 'Spin Cycle OT', sans-serif;
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('/headphones/images/headphones_hero_1.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,50,0.9));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero-content h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.hero-paragraph {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px; /* keeps lines from being too wide */
+}
+
+
+.cta-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff4e4e;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px; /* Rounded corners */
+    margin-top: 15px;   /* Smaller gap above */
+    margin-bottom: 30px; /* Larger gap below */
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover,
+.cta-btn:active {
+    opacity: 0.9;
+}
+
+
+.hero-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav a {
+        margin: 0 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.2rem;
+    }
+    .hero-content p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Layout for What We Do section */
+.what-we-do {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.what-we-do h2 {
+  font-family: 'Spin Cycle OT', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.what-we-do p {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1em;
+  color: black;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.service-item {
+  max-width: 200px;
+}
+
+.service-item h3 {
+  font-size: 1.3em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.service-item p {
+  font-size: 0.95em;
+  color: black;
+}
+
+.our-results {
+  background: url('/headphones/images/headphones_hero_2.jpg') center/contain no-repeat;
+  color: white;
+  text-align: center;
+  padding: 300px 20px;
+  position: relative;
+  background-size: cover;
+}
+
+.our-results .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 60px 20px;
+}
+
+.our-results h2 {
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+
+.our-results p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  .our-results {
+    padding: 80px 15px;
+  }
+  .our-results h2 {
+    font-size: 1.8em;
+  }
+  .our-results p {
+    font-size: 1.1em;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .our-results {
+    padding: 60px 10px;
+  }
+  .our-results .overlay {
+    padding: 40px 15px;
+  }
+  .our-results h2 {
+    font-size: 1.5em;
+  }
+  .our-results p {
+    font-size: 1em;
+  }
+}
+/* Results stats container - horizontal flex */
+.results-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+/* Each pentagon item container */
+.pentagon-item {
+  text-align: center;
+  max-width: 120px;
+  color: white;
+}
+
+.pentagon {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  background: #ff4e4e;
+  clip-path: polygon(
+    50% 0%,      /* top point */
+    90% 35%,     /* top-right */
+    75% 90%,     /* bottom-right */
+    25% 90%,     /* bottom-left */
+    10% 35%      /* top-left */
+  );
+  display: flex;
+  flex-direction: column;   /* stack text vertically */
+  justify-content: center;  /* vertical center */
+  align-items: center;      /* horizontal center */
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0 auto 15px auto;
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* some vertical breathing room */
+}
+
+.pentagon .percent {
+  font-size: 2.5rem;   /* bigger font for +2% */
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.pentagon .desc {
+  font-size: 0.6rem;   /* smaller font for description */
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+/* Adjust text below the pentagon if any */
+.pentagon-item p {
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+  margin-top: 10px;  /* separate from pentagon */
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .results-stats {
+    gap: 20px;
+  }
+  .pentagon {
+    width: 80px;
+    height: 70px;
+    font-size: 1.2rem;
+  }
+  .pentagon-item {
+    max-width: 90px;
+  }
+  .pentagon-item p {
+    font-size: 0.9rem;
+  }
+}
+/* Fade in animation for the form */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-section h2 {
+  font-family: 'Spin Cycle OT', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #000; /* changed from black or white to ensure visibility */
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Form group for floating labels */
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs and textarea style */
+.contact-form input,
+.contact-form textarea {
+  padding: 15px 20px;
+  font-size: 1rem;
+  border: 2px solid #ff4e4e;
+  border-radius: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  background: transparent;
+  color: black;
+  resize: none;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Input focus effect: border glow and slight scale up */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ff6565;
+  box-shadow: 0 0 8px #ff6565;
+  transform: scale(1.02);
+}
+
+/* Floating label */
+.contact-form label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 1rem;
+  pointer-events: none;
+  background: white;
+  padding: 0 5px;
+  transition: 0.3s ease all;
+  border-radius: 4px;
+}
+
+/* When input or textarea is focused OR has content */
+.contact-form input:focus + label,
+.contact-form input:not(:placeholder-shown) + label,
+.contact-form textarea:focus + label,
+.contact-form textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 0.8rem;
+  color: #ff4e4e;
+}
+
+/* Remove native placeholder */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: transparent;
+}
+
+/* Button styling (unchanged but adding hover scale) */
+.contact-form button {
+  background-color: #ff4e4e;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 15px;
+  margin-bottom: 80px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #ff6565;
+  transform: scale(1.05);
+}
+
+.footer {
+  background-color: rgb(0, 0, 29);
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 20px 0 10px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo img {
+  height: 40px;
+  margin-left: 100px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+  font-size: 1.5rem;
+  margin-right: 150px;
+}
+
+.social-icon {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  color: #ff4e4e;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .footer-social {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-top {
+    padding: 0 10px;
+  }
+  .footer-social {
+    gap: 10px;
+    font-size: 1.1rem;
+  }
+}
+
+
+.footer-social svg {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s ease;
+}
+
+.social-icon:hover svg,
+.social-icon:focus svg {
+  fill: #ff4e4e;
+}

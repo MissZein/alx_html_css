@@ -1,11 +1,11 @@
 /* Header Background */
 header.navbar {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('./images/Object.jpg');
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('./images/Object.png');
   background-size: cover;
   background-position: center;
   color: white;
   text-align: center;
-  padding: 100px 20px 60px;
+  padding: 60px 20px 60px;
   font-family: 'Helvetica Neue', sans-serif;
   position: relative;
 }
@@ -44,9 +44,12 @@ nav a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 10px;
 }
 
+.hero-content {
+  text-align: center;
+}
 /* Hero Text */
 .hero-content h1 {
   font-size: 60px;
@@ -59,19 +62,36 @@ nav a {
   justify-content: center;
   gap: 30px;
   list-style: none;
-  font-weight: 600;
+  font-weight: 100;
   margin-bottom: 30px;
+  /* font-size: 30px; */
 }
 
-.register-btn {
+.hero-content .values,
+.hero-content span {
+  color: white;
+  display: inline-block;
+  margin: 0 15px; /* space between words */
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.hero-content .register-button {
+  display: block;
+  margin: 50px auto 0; /* space above button, center horizontally */
+  margin-bottom: 200px;
+  padding: 12px 30px;
   background-color: #C271FF;
   color: white;
   border: none;
-  padding: 14px 32px;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 25px;
+  border-radius: 25px; /* rounded corners */
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content .register-button:hover {
+  background-color: darkmagenta;
 }
 
 /* Pros Section */
@@ -121,6 +141,12 @@ nav a {
   line-height: 1.4;
 }
 
+.quote {
+  display: flex;
+  align-items: center; /* vertically center image & text */
+  gap: 20px; /* space between image and text */
+}
+
 .quote-section {
   background-color: #c271ff;
   padding: 60px 20px;
@@ -147,6 +173,10 @@ nav a {
 
 .quote-text {
   flex: 1;
+}
+.quote-text blockquote {
+  font-style: italic;
+  margin-bottom: 10px;
 }
 
 .testimonial {
@@ -233,9 +263,7 @@ nav a {
 }
 
 .video-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 8px;
 }
 
 .author {
@@ -257,12 +285,13 @@ nav a {
 
 .rating-duration {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: space-between; /* stars on left, duration on right */
+  width: 100%; /* full row below the author */
+  margin-top: 5px;
 }
 
 .stars {
-  color: gold;
+  color:#c271ff;
   font-size: 0.9rem;
 }
 
@@ -297,15 +326,24 @@ nav a {
 
 .membership-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 40px;
 }
 
-.membership-card {
-  max-width: 260px;
-  margin: 0 auto;
+@media (max-width: 1024px) {
+  .membership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+@media (max-width: 600px) {
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 .membership-icon {
   width: 50px;
@@ -370,15 +408,13 @@ nav a {
 }
 
 .faq-item {
-  background-color: #f9f9f9;
+  background-color: white;
   padding: 25px 30px;
+  margin-right: 80px;
+  margin-left: 80px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  /* box-shadow: 0 4px 12px rgba(0,0,0,0.05); */
   transition: box-shadow 0.2s ease;
-}
-
-.faq-item:hover {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
 .faq-question {
@@ -393,7 +429,7 @@ nav a {
 }
 
 .site-footer {
-  background-color: #001f3f; /* Navy blue */
+  background-color: #01101f; /* Navy blue */
   color: #ffffff;
   padding: 40px 20px;
 }
@@ -406,10 +442,12 @@ nav a {
 
 .footer-top {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  flex-direction: row; /* side-by-side instead of stacked */
+  justify-content: space-between; /* push logo left, icons right */
+  align-items: center; /* center vertically */
   margin-bottom: 20px;
+  margin-right: 180px;
+  margin-left: 180px;
 }
 
 .footer-logo {
@@ -417,18 +455,24 @@ nav a {
   height: auto;
 }
 
+.footer-socials {
+  display: flex;
+  gap: 15px; /* space between icons */
+}
+
 .footer-socials i {
   font-size: 24px;
-  margin: 0 10px;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .footer-socials i:hover {
-  color: #00bfff; /* Light blue on hover */
+  color: #00bfff;
 }
 
 .footer-copy {
   font-size: 14px;
+  color: #B0B0B0;
+  margin-top: 50px;
 }
 
